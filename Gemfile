@@ -41,7 +41,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'faker'
-# gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# # gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'mail_form'
-gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+# gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
