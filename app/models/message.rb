@@ -5,11 +5,11 @@ class Message < ApplicationRecord
 
     # Declare the e-mail headers. It accepts anything the mail method
     # in ActionMailer accepts.
-    def headers
-        {
-        :subject => "Contact from GOTRO.com",
-        :to => "joshuagauthreaux@gmail.com",
-        :from => %("#{name}" <#{email}>)
-        }
-    end
+    # def headers
+    #     {
+    #     :subject => "Contact from GOTRO.com",
+    #     :to => "joshuagauthreaux@gmail.com",
+    #     :from => %("#{name}" <#{email}>)
+    #     }
+    # end
 end
