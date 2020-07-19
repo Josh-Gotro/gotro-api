@@ -7,7 +7,10 @@ class MessagesController < ApplicationController
 
     def create 
         comment = Message.create(comment_params)
-        render json: comment
+        if comment.valid?
+            render json: comment
+        else
+            render json: {errors: comment.errors.full_messages}
     end
 
     def show

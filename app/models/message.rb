@@ -1,7 +1,10 @@
 class Message < ApplicationRecord
-    attribute :name,    :validate => true
-    attribute :email,   :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-    attribute :comment, :validate => true
+    validates :name, presence: true
+    validates :comment, presence: true
+    validates :email,
+        format: { with: /^(.+)@(.+)$/, message: "Email invalid"  },
+            uniqueness: { case_sensitive: false },
+            length: { minimum: 4, maximum: 254 }  
 
     # Declare the e-mail headers. It accepts anything the mail method
     # in ActionMailer accepts.
