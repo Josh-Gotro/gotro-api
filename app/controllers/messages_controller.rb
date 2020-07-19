@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
         if comment.valid?
             render json: comment
         else
-            render json: {errors: comment.errors.full_messages}
+            render json: {errors: comment.errors}
     end
 
     def show
