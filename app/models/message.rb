@@ -1,7 +1,9 @@
 class Message < ApplicationRecord
     validates :name, presence: true
     validates :comment, presence: true
-    validates :email, presence: true
+    validates :email, format: { with: /^(.+)@(.+)$/ },
+    validates :email, uniqueness: { case_sensitive: false },
+    validates :email, length: { minimum: 4, maximum: 254 }  
 
     # Declare the e-mail headers. It accepts anything the mail method
     # in ActionMailer accepts.
