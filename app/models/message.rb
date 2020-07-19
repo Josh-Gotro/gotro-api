@@ -1,8 +1,7 @@
 class Message < ApplicationRecord
     validates :name, presence: true
     validates :comment, presence: true
-    validates :email,
-        format: { with: /^(.+)@(.+)$/, message: "Email invalid"  },
+    validates :email, format: { with: /^(.+)@(.+)$/ },
             uniqueness: { case_sensitive: false },
             length: { minimum: 4, maximum: 254 }  
 
